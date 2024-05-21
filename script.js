@@ -1,36 +1,4 @@
-const boards = {
-  "1": {
-    "name":"New York Times Daily",
-    "author":"NYTimes",
-    "board": {
-      "1. Sorcerer's Output": ["Charm", "Hex", "Spell", "Magic"],
-      "2. Classic Superhero Wear": ["Cape", "Mask", "Tights", "Underwear"],
-      "3. One Being Manipulated": ["Instrument", "Pawn", "Tool", "Puppet"],
-      "4. Action Movie Directors": ["Bay", "Carpenter", "Scott", "Woo"]
-    }
-  },
-  "2": {
-    "name":"Orignal #1",
-    "author":"Josh Carlson",
-    "board":{
-      "1. Multimedia": ["Text","Image","Audio","Video"],
-      "2. To Question": ["Inquire","Query","Poll","Interrogate"],
-      "3. Antonyms of Move": ["Remain","Stay","Rest","Idle"],
-      "4. Harry _____": ["Styles","Truman","Hamlin","Hill"]
-    }
-  },
-  "3": {
-    "name":"Orignal #2",
-    "author":"Josh Carlson",
-    "board":{
-      "2. ____Boat": ["Sail","Speed","Banana","Fishing"],
-      "1. To Mention": ["Comment","Notice","Reference","Tribute"],
-      "4. Head Of a": ["House","Country","Division","River"],
-      "3. Increase": ["Multiply","Boost","Raise","Upgrade"]
-    }
-  }
-  
-}
+let boards = null;
 
 const colors = {
   "1.":'orangered',
@@ -144,9 +112,22 @@ document.addEventListener("click", function(event) {
   }
 });
 
+function load_data(){
+  const request = new Request("boards.json");
+  fetch(request)
+    .then((response) => response.text())
+    .then((text) => {
+    boards = JSON.parse(text)
+    console.log(boards["1"]);
+    check_url()
+  });
+}
+
 function check_url(){
+  
   const urlParams = new URLSearchParams(window.location.search);
   const board_id = urlParams.get('board');
+
   // Where I need to get the parent
   if (board_id != null) {
     document.getElementById('browse').style.display = 'none';
@@ -157,6 +138,7 @@ function check_url(){
       window.location.href='/'
     }
   } else {
+    
     document.getElementById('game').style.display = 'none';
     for (key in boards){
       console.log(key)
@@ -165,6 +147,6 @@ function check_url(){
   }
 }
 
-window.onload = check_url
+window.onload = load_data
 
 //make_grid()
