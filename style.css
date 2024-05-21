@@ -65,3 +65,17 @@ nav a {
   line-height: 10px;
   color:darkred
 }
+
+#message {
+  transition: 0.1s;
+  visibility: hidden;
+  text-align: center;
+  color:white;
+  background-color: black;
+  /* Center the element in middle of screen */ 
+  width:100%;
+  position: absolute;
+  padding:20px;
+  top: 30%;
+  left:0
+}

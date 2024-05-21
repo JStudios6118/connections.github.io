@@ -22,14 +22,12 @@ function new_game(board_id) {
   board_name = board_id
   solution = boards[board_id]["board"]
   let temp_board = boards[board_id]["board"]
-  console.log(temp_board)
   for (let key in temp_board) {
     for (i = 0; i < 4; i++) {
       board.push(temp_board[key][i])
     }
   }
   board = shuffle(board)
-  console.log(board)
 }
 
 function shuffle(array) {
@@ -59,6 +57,18 @@ function sortDivsByText(containerId) {
   divElements.forEach((div) => parentDiv.appendChild(div));
 }
 
+function message(id){
+  let msgBox = document.getElementById('message')
+  if (id===0){
+    msgBox.innerText = "One Away!";
+    msgBox.style.visibility = 'visible'
+  }
+  setTimeout(hide_message, 1000);
+}
+
+function hide_message(){
+  document.getElementById("message").style.visibility = 'hidden'
+}
 
 function validate() {
   let submitted = []
@@ -71,7 +81,14 @@ function validate() {
     let can_found = false
     let index = 0
     for (let key in solution) {
-      if (JSON.stringify(submitted) === JSON.stringify(solution[key].sort())) {
+      let amt_correct = 0
+      let temp_solution = solution[key].sort()
+      for (i=0;i<4;i++){
+        if (submitted.includes(temp_solution[i])) {
+          amt_correct++
+        }
+      }
+      if (amt_correct===4) {
         buttons_selected.forEach(button => {
           button.remove()
         })
@@ -82,6 +99,8 @@ function validate() {
         sortDivsByText("correct");
         can_found = true
         break
+      } else if (amt_correct===3){
+        message(0)
       }
       index++
     }
@@ -95,6 +114,7 @@ function validate() {
     }
   }
   if (found == 4){
+    alert("You Win!")
   }
 }
 
@@ -120,7 +140,6 @@ function load_data(){
     .then((response) => response.text())
     .then((text) => {
     boards = JSON.parse(text)
-    console.log(boards["5"]);
     check_url()
   });
 }
