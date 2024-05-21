@@ -52,18 +52,20 @@ function sort_correct_slots(){
 function sortDivsByText(containerId) {
   const parentDiv = document.getElementById(containerId);
   const divElements = Array.from(parentDiv.children);
-  divElements.sort((a, b) => a.innerText.localeCompare(b.innerText));
+  divElements.sort((a, b) => a.innerText.localeCompare(b.innerText)); // Sorts in ascending order if mode is false
   parentDiv.innerHTML = "";
   divElements.forEach((div) => parentDiv.appendChild(div));
 }
 
-function message(id){
+function message(id,delay=1){
   let msgBox = document.getElementById('message')
   if (id===0){
     msgBox.innerText = "One Away!";
-    msgBox.style.visibility = 'visible'
+  } else if (id === 1){
+    msgBox.innerText = "Congratulations! You Win!"
   }
-  setTimeout(hide_message, 1000);
+  msgBox.style.visibility = 'visible'
+  setTimeout(hide_message, delay*1000);
 }
 
 function hide_message(){
@@ -114,7 +116,7 @@ function validate() {
     }
   }
   if (found == 4){
-    alert("You Win!")
+    message(1,3)
   }
 }
 
@@ -131,6 +133,10 @@ document.addEventListener("click", function(event) {
     }
   } else if (event.target && event.target.className === "submit") {
     validate()
+  } else if (event.target && event.target.className === "sort") {
+    if (event.target.id === 'sort_by_name'){
+      sortDivsByText("games");
+    }
   }
 });
 
@@ -163,7 +169,7 @@ function check_url(){
     document.getElementById('game').style.display = 'none';
     for (key in boards){
       console.log(key)
-      document.getElementById('games').innerHTML += `<a href="?board=${key}">${boards[key]["name"]}</a><br>`
+      document.getElementById('games').innerHTML += `<div class='game_option'><a href="?board=${key}">${boards[key]["name"]}</a><p>By ${boards[key]["author"]}</p><br></div>`
     }
   }
 }

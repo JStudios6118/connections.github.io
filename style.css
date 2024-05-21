@@ -71,11 +71,35 @@ nav a {
   visibility: hidden;
   text-align: center;
   color:white;
-  background-color: black;
+  background-color: rgba(0,0,0,0.9);
   /* Center the element in middle of screen */ 
   width:100%;
   position: absolute;
   padding:20px;
   top: 30%;
   left:0
+}
+
+.game_option {
+  background-color: wheat;
+  margin:5px;
+  padding:8px;
+  border-radius: 10px;
+  border:2px solid antiquewhite;
+  display:flex;
+  gap:10px;
+}
+
+.game_option p {
+  line-height: 0;
+  margin-top: 10px;
+}
+
+.sort {
+  background-color: #0a214c;
+  border:1px solid blue;
+  padding:8px;
+  margin:5px;
+  border-radius:10px;
+  color:white;
 }
