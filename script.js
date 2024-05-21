@@ -1,3 +1,5 @@
+// https://connections-k01rg.kinsta.page/
+
 let boards = null;
 
 const colors = {
@@ -118,7 +120,7 @@ function load_data(){
     .then((response) => response.text())
     .then((text) => {
     boards = JSON.parse(text)
-    console.log(boards["1"]);
+    console.log(boards["5"]);
     check_url()
   });
 }

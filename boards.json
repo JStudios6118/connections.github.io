@@ -20,13 +20,33 @@
     }
   },
   "3": {
-    "name":"Orignal #2",
+    "name":"Original #2",
     "author":"Josh Carlson",
     "board":{
       "3. ____Boat": ["Sail","Speed","Banana","Fishing"],
       "2. To Mention": ["Comment","Notice","Reference","Tribute"],
-      "4. Head Of a": ["House","Country","Division","River"],
+      "4. Head Of A": ["House","Country","Division","River"],
       "1. Increase": ["Multiply","Boost","Raise","Upgrade"]
+    }
+  },
+  "4": {
+    "name":"Andrew Original #1",
+    "author":"Andrew Suraci",
+    "board":{
+      "3. To Shovel": ["Shovel","Scoop","Ladle","Scrape"],
+      "4. Bread____": ["Bowl","Winner","Board","Box"],
+      "1. Living Space": ["House","Camp","Attic","Nest"],
+      "2. A Fight": ["Brawl","Melee","Tussle","Contest"]
+    }
+  },
+  "5": {
+    "name":"Original #3",
+    "author":"Josh Carlson",
+    "board":{
+      "1. To Cross": ["Interect","Pass","Divide","Transverse"],
+      "2. Words with Hat":["That","Shatter","Chatter","Hatch"],
+      "3. Birds":["Chick","Eagle","Skimmer","Goose"],
+      "4. Zones":["Industrial","Area","Defense","Temperature"]
     }
   }
 }
