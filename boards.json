@@ -48,5 +48,15 @@
       "3. Birds":["Chick","Eagle","Skimmer","Goose"],
       "4. Zones":["Industrial","Area","Defense","Temperature"]
     }
+  },
+  "6": {
+    "name":"Wesley #1",
+    "author":"Wesley Shen",
+    "board":{
+      "3. River terms" : ["Head", "Tributary", "Delta", "Mouth"],
+      "4. NATO Phonetic Alphabet" : ["Golf", "November", "Hotel", "Whiskey"],
+      "1. Limbs" : ["Leg", "Arm", "Hand", "Foot"],
+      "2. Non-ball sports" : ["Swim", "Surf", "Fence", "Skate"]
+    }
   }
 }
