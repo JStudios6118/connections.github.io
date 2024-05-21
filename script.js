@@ -142,7 +142,7 @@ document.addEventListener("click", function(event) {
 
 function load_data(){
   const request = new Request("boards.json");
-  fetch(request)
+  fetch(request, {cache:"no-cache"})
     .then((response) => response.text())
     .then((text) => {
     boards = JSON.parse(text)
