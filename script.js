@@ -36,6 +36,7 @@ function shuffle(array) {
 
 function make_grid(board_data) {
   document.getElementById('author').innerText = "Author: "+boards[board_name]["author"]
+  document.getElementById('puzzle_name').innerText = "Puzzle: "+boards[board_name]["name"]
   var html = ''
   for (var i = 0; i < 16; i++) {
     html += `<button class="button" id="unselected">${board[i]}</button>`
@@ -169,7 +170,7 @@ function check_url(){
     document.getElementById('game').style.display = 'none';
     for (key in boards){
       console.log(key)
-      document.getElementById('games').innerHTML += `<div class='game_option'><a href="?board=${key}">${boards[key]["name"]}</a><p>By ${boards[key]["author"]}</p><br></div>`
+      document.getElementById('games').innerHTML += `<div class='game_option'><a href="?board=${key}">${boards[key]["name"]}</a><p>- By ${boards[key]["author"]}</p><br></div>`
     }
   }
 }
