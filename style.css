@@ -83,12 +83,20 @@ nav a {
 
 .game_option {
   background-color: wheat;
+  width:fit-content;
   margin:5px;
   padding:8px;
   border-radius: 10px;
   border:2px solid antiquewhite;
   display:flex;
   gap:10px;
+}
+
+#games {
+  display:flex;
+  flex-direction: row;
+  gap:2px;
+  flex-wrap: wrap;
 }
 
 .game_option p {
@@ -118,4 +126,16 @@ a:hover {
 #puzzle_name {
   font-weight: 560;
   font-size:16px;
+}
+
+#newest {
+  background-color: whitesmoke;
+  border:2px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+  margin:5px;
+}
+#newest p {
+  line-height: 0;
+  font-weight: 550;
 }

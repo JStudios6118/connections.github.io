@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <nav><h1>Connections</h1><a href='/'>Home</a></nav>
+  <nav><h1>Connections</h1><a href='/'>Home</a><a href='#' id='random'>Random</a></nav>
   <div id='game'>
     <nav>
       <p id='puzzle_name'></p>
@@ -28,8 +28,13 @@
   </div>
 
   <div id='browse'>
+    <h4>NOTICE: NEW BOARDS ARE SOMETIMES HIDDEN BY YOUR BROWSER CACHE! TRY CLEARING YOUR CACHE DAILY FOR UPDATES. I AM WORKING ON A SOLUTION</h4>
     <h3>Puzzles</h3>
-    <button class='sort' id='sort_by_name'>ABC Sort</button>
+    <div id='newest'>
+      <p>Newest Puzzle</p>
+      <a id='newest_link' href='#'></a>
+    </div>
+    <button class='sort' id='sort_by_date'>Oldest > Newest</button>
     <div id='games'>
     </div>
   </div>

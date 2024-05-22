@@ -30,7 +30,7 @@
     }
   },
   "4": {
-    "name":"Andrew Original #1",
+    "name":"Andrew #1",
     "author":"Andrew Suraci",
     "board":{
       "3. To Shovel": ["Shovel","Scoop","Ladle","Scrape"],
@@ -43,7 +43,7 @@
     "name":"Original #3",
     "author":"Josh Carlson",
     "board":{
-      "1. To Cross": ["Interect","Pass","Divide","Transverse"],
+      "1. To Cross": ["Intersect","Pass","Divide","Transverse"],
       "2. Words with Hat":["That","Shatter","Chatter","Hatch"],
       "3. Birds":["Chick","Eagle","Skimmer","Goose"],
       "4. Zones":["Industrial","Area","Defense","Temperature"]
@@ -57,6 +57,46 @@
       "4. NATO Phonetic Alphabet" : ["Golf", "November", "Hotel", "Whiskey"],
       "1. Limbs" : ["Leg", "Arm", "Hand", "Foot"],
       "2. Non-ball sports" : ["Swim", "Surf", "Fence", "Skate"]
+    }
+  },
+  "7": {
+    "name":"Andrew #2",
+    "author":"Andrew Suraci",
+    "board":{
+      "2. ____ Collection": ["Stamp","Rock","Card","Coin"],
+      "1. Web Browsers": ["Chrome","Edge","Safari","Opera"],
+      "3. Animals": ["Duck","Fisher","Snipe","Echidna"],
+      "4. Presidents' Last Names": ["Bush","Grant","Cleveland","Trump"]
+    }
+  },
+  "8":{
+    "name":"Original #4",
+    "author":"Josh Carlson",
+    "board":{
+      "1. Keyboard Keys":["Control","Space","Enter","Escape"],
+      "2. What a Policeman Prevents":["Crime","Mayhem","Danger","Harm"],
+      "3. Hotel Room Amenities":["Mint","Towel","Soap","Coffee"],
+      "4. Robot Parts":["Bolt","Motor","Computer","Camera"]
+    }
+  },
+  "9": {
+    "name":"Andrew #3",
+    "author":"Andrew Suraci",
+    "board":{
+      "2. ____ Collection": ["Stamp","Rock","Card","Coin"],
+      "1. Web Browsers": ["Chrome","Edge","Safari","Opera"],
+      "3. Animals": ["Duck","Fisher","Snipe","Echidna"],
+      "4. Presidents' Last Names": ["Bush","Grant","Cleveland","Trump"]
+    }
+  },
+  "10": {
+    "name":"Smayan",
+    "author":"Smayan Vinay",
+    "board":{
+      "1. Things to Wear":["Shirt","Jacket","Socks","Glasses"],
+      "2. Gym-Related Verbs":["Pull","Lift","Pull","Bench"],
+      "3. Things in Super Mario Bros.":["Turtle","Donkey","Bullet","Mushroom"],
+      "4. ____ Box":["Beat","Juke","In","Post"]
     }
   }
 }

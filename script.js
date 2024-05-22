@@ -46,8 +46,16 @@ function make_grid(board_data) {
 
 var amt_selected = 0
 
-function sort_correct_slots(){
+let direction = -1;
+
+function random_puzzle(){
   
+  let ids = Object.keys(boards)
+  let random_id = ids[Math.floor(Math.random()*ids.length)]
+
+  
+  
+  location.href = "?board="+random_id
 }
 
 function sortDivsByText(containerId) {
@@ -99,7 +107,6 @@ function validate() {
         document.getElementById('correct').innerHTML+=`<div style="background-color:${color}"><h3>${key}</h3><p>${solution[key]}</p></div>`
         amt_selected = 0
         found++
-        sortDivsByText("correct");
         can_found = true
         break
       } else if (amt_correct===3){
@@ -121,6 +128,19 @@ function validate() {
   }
 }
 
+function date_sort(){
+  let date_filter = document.getElementById("sort_by_date")
+  if (direction == 1){
+    direction = -1
+    date_filter.innerText = "Oldest > Newest"
+  } else {
+    direction = 1
+    date_filter.innerText = "Newest > Oldest"
+  }
+  console.log(`Num: ${direction}`)
+  SortData()
+}
+
 document.addEventListener("click", function(event) {
   if (event.target && event.target.className === "button") {
     if (event.target.id === 'selected') {
@@ -135,9 +155,11 @@ document.addEventListener("click", function(event) {
   } else if (event.target && event.target.className === "submit") {
     validate()
   } else if (event.target && event.target.className === "sort") {
-    if (event.target.id === 'sort_by_name'){
-      sortDivsByText("games");
+    if (event.target.id === 'sort_by_date'){
+      date_sort()
     }
+  } else if (event.target && event.target.id === "random"){
+    random_puzzle()
   }
 });
 
@@ -166,15 +188,43 @@ function check_url(){
       window.location.href='/'
     }
   } else {
+    var last_item = Object.keys(boards)[Object.keys(boards).length - 1]
+    document.getElementById("newest_link").href = "?board="+last_item
+    document.getElementById("newest_link").innerText = boards[last_item]["name"] + " by " + boards[last_item]["author"]
+    
     
     document.getElementById('game').style.display = 'none';
     for (key in boards){
       console.log(key)
-      document.getElementById('games').innerHTML += `<div class='game_option'><a href="?board=${key}">${boards[key]["name"]}</a><p>- By ${boards[key]["author"]}</p><br></div>`
+      document.getElementById('games').innerHTML += `<div class='game_option' data-id=${key}><a href="?board=${key}">${boards[key]["name"]}</a><p>- By ${boards[key]["author"]}</p><br></div>`
     }
+    date_sort()
   }
 }
 
 window.onload = load_data
 
 //make_grid()
+
+function comparator(a, b) { 
+  a = Number(a.dataset.id)
+  b = Number(b.dataset.id)
+  if (a < b) 
+      return 1 * direction;
+  if (a > b) 
+      return -1 * direction; 
+  return 0; 
+} 
+
+// Function to sort Data 
+function SortData() {
+  var subjects = 
+      document.querySelectorAll("[data-id]");
+
+  var subjectsArray = Array.from(subjects); 
+
+  let sorted = subjectsArray.sort(comparator); 
+  sorted.forEach(e => 
+      document.querySelector("#games"). 
+          appendChild(e)); 
+} 
