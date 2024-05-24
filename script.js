@@ -72,6 +72,8 @@ function message(id,delay=1){
     msgBox.innerText = "One Away!";
   } else if (id === 1){
     msgBox.innerText = "Congratulations! You Win!"
+  } else if (id === 2){
+    msgBox.innerText = "Wrong :("
   }
   msgBox.style.visibility = 'visible'
   setTimeout(hide_message, delay*1000);
@@ -111,6 +113,8 @@ function validate() {
         break
       } else if (amt_correct===3){
         message(0)
+      } else if (amt_correct < 3) {
+        message(2,1)
       }
       index++
     }
