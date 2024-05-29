@@ -9,6 +9,14 @@ const colors = {
   "4.":'mediumpurple'
 }
 
+const difficulty_scale = {
+  "1":"Easy",
+  "2":"Normal",
+  "3":"Medium",
+  "4":"Hard",
+  "5":"Insane"
+}
+
 let board = null
 let board_name = null
 let solution = null
@@ -200,7 +208,7 @@ function check_url(){
     document.getElementById('game').style.display = 'none';
     for (key in boards){
       console.log(key)
-      document.getElementById('games').innerHTML += `<div class='game_option' data-id=${key}><a href="?board=${key}">${boards[key]["name"]}</a><p>- By ${boards[key]["author"]}</p><br></div>`
+      document.getElementById('games').innerHTML += `<div class='game_option' data-id=${key} data-rating=${boards[key]["rating"]}><a href="?board=${key}">${boards[key]["name"]}</a><p>- By ${boards[key]["author"]}</p><br><p id='difficulty'>Difficulty: ${difficulty_scale[boards[key]["rating"].toString()]}</p></div>`
     }
     date_sort()
   }

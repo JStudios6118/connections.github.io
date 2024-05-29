@@ -2,6 +2,7 @@
   "1": {
     "name":"New York Times Daily",
     "author":"NYTimes",
+    "rating":3,
     "board": {
       "1. Sorcerer's Output": ["Charm", "Hex", "Spell", "Magic"],
       "2. Classic Superhero Wear": ["Cape", "Mask", "Tights", "Underwear"],
@@ -12,6 +13,7 @@
   "2": {
     "name":"Original #1",
     "author":"Josh Carlson",
+    "rating":2,
     "board":{
       "1. Multimedia": ["Text","Image","Audio","Video"],
       "2. To Question": ["Inquire","Query","Poll","Interrogate"],
@@ -22,6 +24,7 @@
   "3": {
     "name":"Original #2",
     "author":"Josh Carlson",
+    "rating":4,
     "board":{
       "3. ____Boat": ["Sail","Speed","Banana","Fishing"],
       "2. To Mention": ["Comment","Notice","Reference","Tribute"],
@@ -32,6 +35,7 @@
   "4": {
     "name":"Andrew #1",
     "author":"Andrew Suraci",
+    "rating":1,
     "board":{
       "3. To Shovel": ["Shovel","Scoop","Ladle","Scrape"],
       "4. Bread____": ["Bowl","Winner","Board","Box"],
@@ -42,6 +46,7 @@
   "5": {
     "name":"Original #3",
     "author":"Josh Carlson",
+    "rating":3,
     "board":{
       "1. To Cross": ["Intersect","Pass","Divide","Transverse"],
       "2. Words with Hat":["That","Shatter","Chatter","Hatch"],
@@ -52,6 +57,7 @@
   "6": {
     "name":"Wesley #1",
     "author":"Wesley Shen",
+    "rating":4,
     "board":{
       "3. River terms" : ["Head", "Tributary", "Delta", "Mouth"],
       "4. NATO Phonetic Alphabet" : ["Golf", "November", "Hotel", "Whiskey"],
@@ -62,6 +68,7 @@
   "7": {
     "name":"Andrew #2",
     "author":"Andrew Suraci",
+    "rating":2,
     "board":{
       "2. ____ Collection": ["Stamp","Rock","Card","Coin"],
       "1. Web Browsers": ["Chrome","Edge","Safari","Opera"],
@@ -72,6 +79,7 @@
   "8":{
     "name":"Original #4",
     "author":"Josh Carlson",
+    "rating":5,
     "board":{
       "1. Keyboard Keys":["Control","Space","Enter","Escape"],
       "2. What a Policeman Prevents":["Crime","Mayhem","Danger","Harm"],
@@ -82,6 +90,7 @@
   "9": {
     "name":"Smayan",
     "author":"Smayan Vinay",
+    "rating":2,
     "board":{
       "1. Things to Wear":["Shirt","Jacket","Socks","Glasses"],
       "2. Gym-Related Verbs":["Pull","Lift","Push","Bench"],
@@ -92,6 +101,7 @@
   "10": {
     "name":"Original #5",
     "author":"Josh Carlson",
+    "rating":5,
     "board":{
       "2. Parts of a Sword": ["Grip","Blade","Neck","Point"],
       "3. ____ Code": ["Bar","Morse","Pass","Enigma"],
@@ -102,11 +112,34 @@
   "11": {
     "name":"Ranbir #1",
     "author":"Ranbir",
+    "rating":3,
     "board":{
       "1. Fast Foods":["Fry","Shake","Sandwich","Soda"],
       "2. Generic White Names":["John","Will","Mike","Luke"],
       "3. Famous Johns":["Williams","Lennon","Kennedy","Adams"],
       "4. Famous American Wars":["Korea","Vietnam","Afgaanistan","Civil War"]
+    }
+  },
+  "12": {
+    "name":"Original Connections #2",
+    "author":"Wesley",
+    "rating":4,
+    "board":{
+      "1. ___ Day":["D","May","Fathers'","Mon"],
+      "2. Countries the US has fought":["United Kingdom","Afghanistan","Vietnam","North Korea"],
+      "3. Smallest Countries":["Monaco","Timor Leste","Palau","Saint Lucia"],
+      "4. ____ City":["Guatemala","Mexico","New York","Union"]
+    }
+  },
+  "13": {
+    "name":"Ben's Evil Puzzle",
+    "author":"Benny The Cow",
+    "rating":4,
+    "board":{
+      "1. Nuts":["Peanut","Almo","Cashew","Pistachio"],
+      "2. Video Call Apps":["Discord","Meets","Zoom","Slack"],
+      "3. Pleasanton Schools":["Harvest","Walnut","Foothill","Vintage"],
+      "4. Anagrams":["Mates","Steam","Meats","Tames"]
     }
   }
 }

@@ -139,3 +139,21 @@ a:hover {
   line-height: 0;
   font-weight: 550;
 }
+#difficulty {
+  display:block
+}
+[data-rating='1']{
+  background-color: #57cb57;
+}
+[data-rating='2']{
+  background-color: #fffa61;
+}
+[data-rating='3']{
+  background-color: #ffa947;
+}
+[data-rating='4']{
+  background-color: #ff6666;
+}
+[data-rating='5']{
+  background-color: #ff75f4;
+}
