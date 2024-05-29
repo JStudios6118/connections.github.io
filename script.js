@@ -101,6 +101,8 @@ function validate() {
     submitted = submitted.sort()
     let can_found = false
     let index = 0
+    let most_correct = 0
+    let final_key = null
     for (let key in solution) {
       let amt_correct = 0
       let temp_solution = solution[key].sort()
@@ -109,23 +111,26 @@ function validate() {
           amt_correct++
         }
       }
-      if (amt_correct===4) {
-        buttons_selected.forEach(button => {
-          button.remove()
-        })
-        let color = colors[key.slice(0,2)]
-        document.getElementById('correct').innerHTML+=`<div style="background-color:${color}"><h3>${key}</h3><p>${solution[key]}</p></div>`
-        amt_selected = 0
-        found++
-        can_found = true
-        break
-      } else if (amt_correct===3){
-        message(0)
-      } else if (amt_correct < 3) {
-        message(2,1)
+      if (amt_correct > most_correct){
+        most_correct = amt_correct
+        final_key = key
       }
-      index++
     }
+    if (most_correct===4) {
+      buttons_selected.forEach(button => {
+        button.remove()
+      })
+      let color = colors[final_key.slice(0,2)]
+      document.getElementById('correct').innerHTML+=`<div style="background-color:${color}"><h3>${final_key}</h3><p>${solution[final_key]}</p></div>`
+      amt_selected = 0
+      found++
+      can_found = true
+    } else if (most_correct===3){
+      message(0)
+    } else if (most_correct < 3) {
+      message(2,1)
+    }
+    index++
     if (!can_found){
       mistakes++
       document.getElementById('mistakes').innerText = `${mistakes}/4`
@@ -135,7 +140,7 @@ function validate() {
       }
     }
   }
-  if (found == 4){
+  if (found === 4){
     message(1,3)
   }
 }
