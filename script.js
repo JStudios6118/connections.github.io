@@ -12,8 +12,8 @@ const colors = {
 const difficulty_scale = {
   "1":"Easy",
   "2":"Normal",
-  "3":"Medium",
-  "4":"Hard",
+  "3":"Hard",
+  "4":"Harder",
   "5":"Insane"
 }
 
